@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogo - Moto Tienda</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header></header>
+
+    <main>
+      <section>
+        <h1>Catalogo de productos</h1>
+
+        <form id="formFiltros" class="fila">
+          <input type="text" id="buscar" placeholder="Nombre o descripcion" />
+          <select id="categoria">
+            <option value="">Todas las categorias</option>
+          </select>
+          <input type="submit" value="Filtrar" />
+        </form>
+
+        <p id="cantidad"></p>
+        <br />
+        <div id="productos" class="grid_productos"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Proyecto final - Fundamentos de Back End y Front End</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/catalogo.js"></script>
+  </body>
+</html>

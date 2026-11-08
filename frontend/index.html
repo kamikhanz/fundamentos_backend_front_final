@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moto Tienda</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header></header>
+
+    <main>
+      <section id="buscar">
+        <h1>Bienvenido a Moto Tienda</h1>
+        <form class="fila" action="catalogo.html" method="get">
+          <input type="text" name="buscar" placeholder="Buscar producto" required />
+          <input type="submit" value="Buscar" />
+        </form>
+      </section>
+
+      <section>
+        <h2>Productos para ti</h2>
+        <div id="aleatorios" class="grid_productos"></div>
+      </section>
+
+      <section>
+        <h2>Productos destacados</h2>
+        <div id="destacados" class="grid_productos"></div>
+      </section>
+
+      <section>
+        <h2>Categorias</h2>
+        <ul id="categorias" class="lista_categorias"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Proyecto final - Fundamentos de Back End y Front End</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

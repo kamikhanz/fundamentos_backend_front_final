@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrar - Moto Tienda</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header></header>
+
+    <main>
+      <p id="aviso"></p>
+
+      <div id="panel" hidden>
+        <h1>Administracion</h1>
+
+        <section>
+          <form id="formCategoria">
+            <fieldset>
+              <legend>Categoria</legend>
+              <input type="hidden" id="categoriaId" />
+
+              <label for="categoriaNombre">Nombre:</label>
+              <input type="text" id="categoriaNombre" minlength="2" required />
+
+              <label for="categoriaDescripcion">Descripcion:</label>
+              <input type="text" id="categoriaDescripcion" />
+
+              <br /><br />
+              <input type="submit" value="Guardar categoria" />
+              <input type="reset" value="Limpiar" />
+            </fieldset>
+          </form>
+
+          <div class="tabla">
+            <table>
+              <thead>
+                <tr><th>ID</th><th>Nombre</th><th>Descripcion</th><th>Acciones</th></tr>
+              </thead>
+              <tbody id="tablaCategorias"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <form id="formProducto">
+            <fieldset>
+              <legend>Producto</legend>
+              <input type="hidden" id="productoId" />
+
+              <label for="productoNombre">Nombre:</label>
+              <input type="text" id="productoNombre" minlength="2" required />
+
+              <label for="productoCodigo">Codigo:</label>
+              <input type="text" id="productoCodigo" />
+
+              <label for="productoDescripcion">Descripcion:</label>
+              <input type="text" id="productoDescripcion" />
+
+              <label for="productoPrecio">Precio:</label>
+              <input type="number" id="productoPrecio" min="0.01" step="0.01" required />
+
+              <label for="productoStock">Stock:</label>
+              <input type="number" id="productoStock" min="0" step="1" required />
+
+              <label for="productoImagen">Ruta de la imagen:</label>
+              <input type="text" id="productoImagen" placeholder="Assets/productos/cascos/foto.jpg" />
+
+              <label for="productoCategoria">Categoria:</label>
+              <select id="productoCategoria" required></select>
+
+              <label for="productoDestacado">
+                <input type="checkbox" id="productoDestacado" /> Destacado
+              </label>
+
+              <br />
+              <input type="submit" value="Guardar producto" />
+              <input type="reset" value="Limpiar" />
+            </fieldset>
+          </form>
+
+          <div class="tabla">
+            <table>
+              <thead>
+                <tr><th>ID</th><th>Nombre</th><th>Categoria</th><th>Precio</th><th>Stock</th><th>Acciones</th></tr>
+              </thead>
+              <tbody id="tablaProductos"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>Pedidos registrados</h2>
+          <div class="tabla">
+            <table>
+              <thead>
+                <tr><th>ID</th><th>Cliente</th><th>Fecha</th><th>Total</th><th>Productos</th><th>Estado</th></tr>
+              </thead>
+              <tbody id="tablaPedidos"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>Proyecto final - Fundamentos de Back End y Front End</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>
